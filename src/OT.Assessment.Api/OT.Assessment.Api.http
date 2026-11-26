@@ -1,0 +1,21 @@
+@baseUrl = http://localhost:5235
+
+### Submit a casino wager
+POST {{baseUrl}}/api/player/casinowager
+Content-Type: application/json
+
+{
+  "wagerId": "aa6700eb-1a06-483e-9739-d293dc7a9383",
+  "accountId": "5ac75fec-23e9-27d1-b660-179eee70003d",
+  "Username": "Jay.Bernhard67",
+  "provider": "Ergonomic Soft Fish",
+  "gameName": "Ergonomic Granite Cheese",
+  "amount": 38273.97445466,
+  "createdDateTime": "2024-05-04T02:25:05.9906387+02:00"
+}
+
+### Get a player's latest wagers
+GET {{baseUrl}}/api/player/5ac75fec-23e9-27d1-b660-179eee70003d/casino?pageSize=10&page=1
+
+### Get top spenders
+GET {{baseUrl}}/api/player/topSpenders?count=10
